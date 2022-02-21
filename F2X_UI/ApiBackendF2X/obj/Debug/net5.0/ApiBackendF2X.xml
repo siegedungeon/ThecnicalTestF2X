@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiBackendF2X</name>
+    </assembly>
+    <members>
+        <member name="M:ApiBackendF2X.Controllers.ValuesController.GetConteo(System.String)">
+            <summary>
+            Obtiene resultados a partir de una fecha consultada
+            </summary>
+            <remarks>
+            Es Obligatorio mantener el formato de la fecha yyyy-MM-dd
+            </remarks>
+            <param name="FechaConsultada">FechaConsultada string</param>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>               
+        </member>
+        <member name="M:ApiBackendF2X.Controllers.ValuesController.GetRecaudo(System.String)">
+            <summary>
+            Obtiene resultados a partir de una fecha consultada
+            </summary>
+            <remarks>
+            Es Obligatorio mantener el formato de la fecha yyyy-MM-dd
+            </remarks>
+            <param name="FechaConsultada">FechaConsultada string</param>
+            <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
+            <response code="200">OK. Devuelve el objeto solicitado.</response>           
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F2X_UI", "F2X_UI\F2X_UI.csproj", "{A630EB84-4878-4C03-BAAF-6551C25DE5FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{8044DACD-552B-4F2F-B1F0-98F314D87600}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DBE85C66-07AF-4E53-985B-37BB851755D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBackendF2X", "ApiBackendF2X\ApiBackendF2X.csproj", "{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{14FAE02F-B87A-4025-8453-EB2A057780FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A630EB84-4878-4C03-BAAF-6551C25DE5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A630EB84-4878-4C03-BAAF-6551C25DE5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A630EB84-4878-4C03-BAAF-6551C25DE5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A630EB84-4878-4C03-BAAF-6551C25DE5FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FAE02F-B87A-4025-8453-EB2A057780FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FAE02F-B87A-4025-8453-EB2A057780FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FAE02F-B87A-4025-8453-EB2A057780FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FAE02F-B87A-4025-8453-EB2A057780FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A630EB84-4878-4C03-BAAF-6551C25DE5FC} = {8044DACD-552B-4F2F-B1F0-98F314D87600}
+		{F33A793D-A1DA-4EFB-9F8F-4BEC7163F472} = {DBE85C66-07AF-4E53-985B-37BB851755D8}
+		{14FAE02F-B87A-4025-8453-EB2A057780FC} = {DBE85C66-07AF-4E53-985B-37BB851755D8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE7E5C89-F43B-4BB0-94CE-5F689FD70277}
+	EndGlobalSection
+EndGlobal

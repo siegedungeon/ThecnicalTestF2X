@@ -1,0 +1,52 @@
+<p>Conteo</p>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date"
+         (dateInput)="onDate($event)" (dateChange)="onDate($event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+  <h2>Tabla Conteo</h2>
+
+  <table class="table table-hover">
+    <thead class="thead-dark"> 
+        <tr>
+         <th scope="col">estacion</th>
+          <th scope="col">sentido</th>
+          <th scope="col">hora</th>
+          <th scope="col">categoria</th>
+          <th scope="col">cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr *ngFor=" let a of service.conteo">
+      <td >{{a.estacion}}</td>
+      <td >{{a.sentido}}</td>
+      <td >{{a.hora}}</td>
+      <td >{{a.categoria}}</td>
+      <td >{{a.cantidad}}</td>
+    </tr>
+</tbody>
+</table>
+
+ <h2>Tabla Recaudo</h2>
+<table class="table table-hover">
+    <thead class="thead-dark"> 
+        <tr>
+            <th scope="col">estacion</th>
+            <th scope="col">sentido</th>
+            <th scope="col">hora</th>
+            <th scope="col">categoria</th>
+            <th scope="col">valorTabulado</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr *ngFor=" let a of service.recaudo">
+        <td >{{a.estacion}}</td>
+        <td >{{a.sentido}}</td>
+        <td >{{a.hora}}</td>
+        <td >{{a.categoria}}</td>
+        <td >{{a.valorTabulado}}</td>
+    </tr>
+</tbody>
+</table>
