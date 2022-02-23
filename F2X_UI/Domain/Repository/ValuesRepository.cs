@@ -197,7 +197,7 @@ namespace Domain.Repository
                     var data = JsonSerializer.Deserialize<List<ConteoResponseDTO>>(responseContent);
                     return data;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return new List<ConteoResponseDTO>();
                 }
@@ -225,13 +225,54 @@ namespace Domain.Repository
                     var data = JsonSerializer.Deserialize<List<RecaudoResponseDTO>>(responseContent);
                     return data;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return new List<RecaudoResponseDTO>();
                 }
             }
 
             throw new ApplicationException($"Status code: {response.StatusCode}, Error: {response.ReasonPhrase}");
+        }
+
+
+        public async Task<List<ReporteMesDTO>> GetReporteMes()
+        {
+            var aRetornar = new List<ReporteMesDTO>();
+
+            var fecha = DateTime.UtcNow;
+            var firstDayOfMonth = new DateTime(fecha.Year, fecha.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+
+            var cosulta = from r in _context.TBL_Recaudo
+                         join c in _context.TBL_Conteo 
+                             on r.estacion equals c.estacion into g
+                from d in g.DefaultIfEmpty()
+                orderby d.fechaConsultada.Year, d.fechaConsultada.Month
+                select new EstacionValuesDTO()
+                {
+                    Cantidad = d.cantidad,
+                    Valor = d.cantidad,
+                    Fecha = d.fechaConsultada,
+                    Estacion = d.estacion
+                };
+
+            if (cosulta.ToList() != null)
+            {
+                var response = cosulta.GroupBy(a => a.Fecha);
+
+                
+
+                foreach (var item in response)
+                {
+                    aRetornar.Add(new ReporteMesDTO()
+                    {
+                        Fecha = item.Key,
+                        Estaciones = item.ToList()
+                    });
+                }
+            }
+
+            return aRetornar;
         }
     }
 }

@@ -13,6 +13,11 @@ namespace Domain.Service
             _valueRepository = valueRepository;
         }
 
+        public async Task<List<ReporteMesDTO>> GetReporteMes()
+        {
+            return await _valueRepository.GetReporteMes();
+        }
+
         public async Task<List<RecaudoResponseDTO>> GetVehiculesCollection(string fecha_consulta)
         {
             return await _valueRepository.GetVehiculesCollection(fecha_consulta);

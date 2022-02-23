@@ -68,3 +68,4 @@ C:\Users\DiegoDeveloper\Desktop\PT\Prueba TecnicaDiegoPabon\AngularUI\ThecnicalT
 C:\Users\DiegoDeveloper\Desktop\PT\Prueba TecnicaDiegoPabon\AngularUI\ThecnicalTestF2X\F2X_UI\ApiBackendF2X\bin\Debug\net5.0\NSwag.Annotations.dll
 C:\Users\DiegoDeveloper\Desktop\PT\Prueba TecnicaDiegoPabon\AngularUI\ThecnicalTestF2X\F2X_UI\ApiBackendF2X\bin\Debug\net5.0\ApiBackendF2X.xml
 C:\Users\DiegoDeveloper\Desktop\PT\Prueba TecnicaDiegoPabon\AngularUI\ThecnicalTestF2X\F2X_UI\ApiBackendF2X\obj\Debug\net5.0\ApiBackendF2X.xml
+C:\Users\DiegoDeveloper\Desktop\PT\Prueba TecnicaDiegoPabon\AngularUI\ThecnicalTestF2X\F2X_UI\ApiBackendF2X\bin\Debug\net5.0\DinkToPdf.dll

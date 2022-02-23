@@ -8,5 +8,6 @@ namespace Domain.Repository
     {
         Task<List<ConteoResponseDTO>> GetVehiculesCounting(string fecha_consulta);
         Task<List<RecaudoResponseDTO>> GetVehiculesCollection(string fecha_consulta);
+        Task<List<ReporteMesDTO>> GetReporteMes();
     }
 }

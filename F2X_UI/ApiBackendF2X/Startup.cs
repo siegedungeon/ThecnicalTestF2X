@@ -13,6 +13,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using DinkToPdf;
+using DinkToPdf.Contracts;
 using Domain.Models;
 using Domain.Repository;
 using Domain.Service;
@@ -75,6 +77,7 @@ namespace ApiBackendF2X
             services.AddTransient<IValuesRepository, ValuesRepository>();
             services.AddTransient<IValuesService, ValuesService>();
             services.AddSingleton(Configuration);
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
             services.AddHttpClient();
             services.AddMemoryCache();
             services.AddCors();
